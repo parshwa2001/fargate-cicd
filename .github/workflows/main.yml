@@ -61,7 +61,7 @@ jobs:
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
-        task-definition: arn:aws:ecs:us-east-1:328927860119:task-definition/serverless-web:2
+        task-definition: serverless-web-revision2-AWS-CLI-input.json
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
