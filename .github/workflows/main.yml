@@ -17,7 +17,7 @@ jobs:
 
     - name: Update ECS Service
       run: |
-        aws ecs update-service --cluster serverless-web --service serverless-cicd --force-new-deployment --region us-east-1
+        aws ecs update-service --cluster serverless-web --task definition serverless-web:2 --service serverless-cicd --force-new-deployment --region us-east-1
       env:
         AWS_ACCESS_KEY_ID: AKIAUZFNA2WLZNWL6UMF
         AWS_SECRET_ACCESS_KEY: 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
